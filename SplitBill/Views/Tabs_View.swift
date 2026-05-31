@@ -11,7 +11,11 @@ struct Tabs_View: View {
     var body: some View {
         TabView{
             Tab("Home",systemImage: components.iconHome, content: {
-                ContentView()
+                if #available(iOS 26.0, *) {
+                    ContentView()
+                } else {
+                    // Fallback on earlier versions
+                }
             })
             
             Tab("Settings",systemImage: components.iconSettings,content: {

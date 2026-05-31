@@ -7,25 +7,27 @@
 
 import SwiftUI
 import SwiftData
+@available(iOS 26.0, *)
 struct CreateSplitBillView: View {
+    @Environment(\.modelContext) private var modelcontext
     @Environment(\.dismiss) private var dismiss
     @State private var amount: Double?
     @State private var numberOfPeople : Int = 1
-    @State private var selection : Split_Model.Taxes = .ZeroPercent
+    @State private var tipSelection : Split_Model.Tip = .ZeroPercent
     
     var previewSplit: Split_Model{
         Split_Model(id: UUID(),
-                    amount: Double(amount ?? 0),
+                    amount: amount ?? 0,
                     numberOfPeople: numberOfPeople,
-                    tax: selection
+                    tip: tipSelection
         //            total: 0
         )
     }
     var body: some View {
         NavigationStack{
             VStack(){
-                Text("Split the Bill")
-                    .font(.system(size: 26))
+               // Text("Split the Bill")
+               //     .font(.system(size: 26))
                 VStack{
                     Form{
                         TextField("Add the amount", value: $amount,
@@ -38,7 +40,7 @@ struct CreateSplitBillView: View {
                             .listRowSeparator(.hidden)
                             .listRowBackground(Color.clear)
                         VStack(spacing:12){
-                            Text("Total Bill + Taxes")
+                            Text("Total Bill + Tip")
                                 .font(.headline)
                             
                           //  Text("$\(previewSplit.totalAmount,specifier:"%.2f")")
@@ -52,7 +54,8 @@ struct CreateSplitBillView: View {
                                 .foregroundStyle(components.ButtonColorGray)
                                 .bold()
                         }
-                            .frame(width: 400,height: 250)
+                           // .frame(width: 400,height: 250)
+                        .frame(maxWidth:.infinity)
                             .listRowSeparator(.hidden)
                             .listRowBackground(Color.clear)
                         
@@ -62,7 +65,7 @@ struct CreateSplitBillView: View {
                     
                 }
                 VStack{
-                    Text("Choose the tax")
+                    Text("Choose the tip")
                         .foregroundStyle(.pink.opacity(0.7))
                         .bold()
                         .padding()
@@ -70,10 +73,10 @@ struct CreateSplitBillView: View {
                 ScrollView(.horizontal, showsIndicators: false,content: {
                     HStack(content: {
                         
-                        ForEach(Split_Model.Taxes.allCases){ tax in
-                            CardTaxes(tax: tax, isSelected: selection == tax)
+                        ForEach(Split_Model.Tip.allCases){ tip in
+                            CardTaxes(tip: tip, isSelected: tipSelection == tip)
                                 .onTapGesture {
-                                    selection = tax
+                                    tipSelection = tip
                                 }
                         }
                     })
@@ -91,6 +94,7 @@ struct CreateSplitBillView: View {
                         customXmarkButton
                     })
                 })
+                .navigationSubtitle("New Split")
         }
         
     }
@@ -106,18 +110,21 @@ struct CreateSplitBillView: View {
     @ViewBuilder
     private var customSaveButton: some View{
         Button("Save"){
+            
             //implementar func
-        }
+            save()
+            dismiss()
+        }.disabled(amount == nil || amount == 0)
             .fontDesign(.monospaced)
             .tint(components.ButtonColorGray)
     }
     
     struct CardTaxes : View {
-        let tax: Split_Model.Taxes
+        let tip: Split_Model.Tip
         let isSelected : Bool
         var body: some View {
             ZStack{
-                Text("\(tax.rawValue)")
+                Text("\(tip.rawValue)")
                 HStack{
                     RoundedRectangle(cornerRadius: 20, style: .continuous)
                         .strokeBorder(
@@ -125,19 +132,36 @@ struct CreateSplitBillView: View {
                             : AnyShapeStyle(Color.indigo.opacity(0.2)),
                             lineWidth: 3)
                         .frame(width: 100, height: 100)
-                    // MARK: - Sin gradient
-//                        RoundedRectangle(cornerRadius: 20, style: .continuous)
-//                        .strokeBorder(
-//                            isSelected ?                              components.ButtonColorGray : Color.indigo.opacity(0.2),lineWidth: 3.0)
-//                            .frame(width: 100, height: 100)
-//
                 }
             }
         }
     }
+    
+    
+  private func save(){
+        let split = Split_Model(id: UUID(),
+                                amount: amount ?? 0 ,
+                                numberOfPeople: numberOfPeople,
+                                tip: tipSelection, currentDate: .now)
+    
+        modelcontext.insert(split)
+        do{
+            try modelcontext.save() // se usa try: propaga el error, try? = si falla no entra al catch y se ignora el error
+            print("Data saved,\(split.totalAmount),\(split.tip)")
+        }
+        catch{
+            print(error.localizedDescription)
+        }
+
+    }
 }
 
 #Preview {
-    CreateSplitBillView()
-        .modelContainer(for: Split_Model.self, inMemory: true)
+    if #available(iOS 26.0, *) {
+        CreateSplitBillView()
+            .modelContainer(for: Split_Model.self, inMemory: true)
+    } else {
+        // Fallback on earlier versions
+    }
 }
+

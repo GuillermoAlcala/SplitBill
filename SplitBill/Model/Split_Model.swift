@@ -10,9 +10,9 @@ import SwiftData
 @Model
 class Split_Model: Identifiable{
     var id               : UUID = UUID()
-    var amount           : Double 
+    var amount           : Double
     var numberOfPeople : Int
-    var tax              : Taxes = Taxes.ZeroPercent
+    var tip              : Tip = Tip.ZeroPercent
    // var total            : Double
     var currentDate      : Date = Date()
     
@@ -20,7 +20,7 @@ class Split_Model: Identifiable{
     //calcular el total con impuestos
     var totalAmount: Double{
     
-        let cleanTax   = tax.rawValue.replacingOccurrences(of: "%", with: "") //limpiamos el string del enum
+        let cleanTax   = tip.rawValue.replacingOccurrences(of: "%", with: "") //limpiamos el string del enum
         let taxValue   = (Double(cleanTax) ?? 0) / 100 //convertimos a Double
         let iva        = amount * taxValue //calculamos el iva
         let finaltotal = amount + iva      //calculamos el total
@@ -35,19 +35,19 @@ class Split_Model: Identifiable{
         return totalAmount / Double(numberOfPeople)
     }
     
-    init(id : UUID, amount: Double, numberOfPeople: Int, tax: Taxes,
+    init(id : UUID, amount: Double, numberOfPeople: Int, tip: Tip,
          //total: Double,
          currentDate: Date = .now){
         self.id = id
         self.amount = amount
         self.numberOfPeople = numberOfPeople
-        self.tax = tax
+        self.tip = tip
       //  self.total = total
         self.currentDate = currentDate
     }
     
     
-    enum Taxes: String, Codable, CaseIterable, Identifiable{
+    enum Tip: String, Codable, CaseIterable, Identifiable{
         case ZeroPercent    = "0%"
         case FivePercent    = "5%"
         case TenPercent     = "10%"
