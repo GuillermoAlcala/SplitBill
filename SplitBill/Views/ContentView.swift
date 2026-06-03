@@ -42,7 +42,8 @@ struct ContentView: View {
             }
             .navigationTitle("Split Bill")
             .sheet(isPresented: $isPresented, content: {
-                CreateSplitBillView()
+                //CreateSplitBillView()
+                CreateSplitView2()
                 .presentationDetents([.large])
                 .presentationDragIndicator(.visible)
                 .presentationBackgroundInteraction(.automatic)
@@ -98,11 +99,6 @@ struct ContentView: View {
     
     
 } //struct
-
-
-
-
-
 
 extension View{
     func customSwipeActionsDelete(onDelete: @escaping() -> Void) -> some View{

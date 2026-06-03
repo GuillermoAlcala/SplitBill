@@ -12,7 +12,7 @@ struct Tabs_View: View {
         TabView{
             Tab("Home",systemImage: components.iconHome, content: {
                 if #available(iOS 26.0, *) {
-                    ContentView()
+                    ContentView2()
                 } else {
                     // Fallback on earlier versions
                 }

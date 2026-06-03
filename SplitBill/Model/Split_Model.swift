@@ -11,7 +11,7 @@ import SwiftData
 class Split_Model: Identifiable{
     var id               : UUID = UUID()
     var amount           : Double
-    var numberOfPeople : Int
+    var numberOfPeople   : Int
     var tip              : Tip = Tip.ZeroPercent
    // var total            : Double
     var currentDate      : Date = Date()
