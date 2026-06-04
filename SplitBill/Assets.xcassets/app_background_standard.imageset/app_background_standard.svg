@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 2806" style="width: 100%; margin: 0px auto; border-radius: 32px;" role="img" aria-label="Fondo estandar para apps iOS, paleta azul profundo con grid sutil">
+
+  <defs>
+    <linearGradient id="bga" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="40%" stop-color="#0d1d36"/>
+      <stop offset="100%" stop-color="#142847"/>
+    </linearGradient>
+
+    <radialGradient id="accent1" cx="20%" cy="15%" r="40%">
+      <stop offset="0%" stop-color="#f4a261" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#f4a261" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="accent2" cx="85%" cy="85%" r="50%">
+      <stop offset="0%" stop-color="#5b8def" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#5b8def" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="grida" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.025"/>
+    </pattern>
+  <mask id="imagine-text-gaps-mei6ol" maskUnits="userSpaceOnUse"><rect x="0" y="0" width="1300" height="2806" fill="white"/><rect x="-4" y="-22.763975143432617" width="154.1659698486328" height="30.1806640625" fill="black" rx="2"/></mask></defs>
+
+  <rect width="1290" height="2796" fill="url(#bga)" style="stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <rect width="1290" height="2796" fill="url(#grida)" style="stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <rect width="1290" height="2796" fill="url(#accent1)" style="stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <rect width="1290" height="2796" fill="url(#accent2)" style="stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Marca esquina superior derecha (sutil) -->
+  <g transform="translate(1170, 200)" opacity="0.25" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.25;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+    <line x1="0" y1="0" x2="60" y2="0" stroke="#f4a261" stroke-width="1.5" mask="url(#imagine-text-gaps-mei6ol)" style="fill:rgb(0, 0, 0);stroke:rgb(244, 162, 97);color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <line x1="60" y1="0" x2="60" y2="60" stroke="#f4a261" stroke-width="1.5" mask="url(#imagine-text-gaps-mei6ol)" style="fill:rgb(0, 0, 0);stroke:rgb(244, 162, 97);color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  </g>
+
+  <!-- Marca esquina inferior izquierda (sutil) -->
+  <g transform="translate(120, 2596)" opacity="0.2" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.2;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+    <text x="0" y="0" fill="#f4a261" font-family="-apple-system, 'SF Mono', monospace" font-size="22" font-weight="400" letter-spacing="3" style="fill:rgb(244, 162, 97);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:-apple-system, &quot;SF Mono&quot;, monospace;font-size:22px;font-weight:400;text-anchor:start;dominant-baseline:auto">GC · 2026</text>
+  </g>
+
+  <!-- Punto decorativo central abstracto -->
+  <circle cx="645" cy="1398" r="1.5" fill="#f4a261" opacity="0.4" style="fill:rgb(244, 162, 97);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.4;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <circle cx="645" cy="1398" r="80" fill="none" stroke="#f4a261" stroke-width="0.5" opacity="0.08" style="fill:none;stroke:rgb(244, 162, 97);color:rgb(255, 255, 255);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.08;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <circle cx="645" cy="1398" r="180" fill="none" stroke="#f4a261" stroke-width="0.5" opacity="0.05" style="fill:none;stroke:rgb(244, 162, 97);color:rgb(255, 255, 255);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.05;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+</svg>
