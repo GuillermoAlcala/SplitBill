@@ -12,7 +12,8 @@ struct components{
     // MARK: ICONS
     static let iconHome     = "house"
     static let iconSettings = "accessibility"
-    
+    static let iconDeveloper = "apple.terminal"
+    static let iconAppleLogo    = "apple.logo"
     
     // MARK: BUTTONS -
     static let ButtonColorGray = Color(.gray)

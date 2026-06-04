@@ -18,8 +18,11 @@ struct Tabs_View: View {
                 }
             })
             
-            Tab("Settings",systemImage: components.iconSettings,content: {
-                SettingView()
+            Tab("Settings", systemImage: components.iconSettings){
+                SettingsView()
+            }
+            Tab("Developer",systemImage: components.iconDeveloper,content: {
+                DeveloperView()
                 })
     
         }
