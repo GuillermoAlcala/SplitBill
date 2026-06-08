@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @Binding  var mostrarVista : Bool
+    @AppStorage("isDarkMode") private var isDarkMode : Bool = false
     var body: some View {
         NavigationStack {
             List {
@@ -14,13 +16,27 @@ struct SettingsView: View {
 
                 // ── Sección protegida con Face ID ────────────────────
                 Section("Privado") {
-                    PrivateSettingsSection()
-                        .biometricLocked(reason: "Accede a tu configuración privada")
-                }
+             //       PrivateSettingsSection()
+                    HiddenFeatures(isDeveloperTabVisible: $mostrarVista)
+                    ToggleColorScheme
+                        
+                }.biometricLocked(reason: "Accede a tu configuración privada")
 
-            }
+            } //List
             .navigationTitle("Ajustes")
         }
+    }
+    @ViewBuilder
+    private var ToggleColorScheme : some View{
+        Toggle(isOn: $isDarkMode, label: {
+                Label(isDarkMode ? "Dark Mode" : "Light Mode",
+                      systemImage: isDarkMode ? "moon" : "sun.min")
+            }).toggleStyle(.automatic)
+             //   .contentTransition(.symbolEffect)
+                .contentTransition(.symbolEffect(.replace)) // Animate symbol smoothly
+
+                .tint(.mint)
+                
     }
 }
 
@@ -41,7 +57,9 @@ struct PrivateSettingsSection: View {
     }
 }
 
+
+
 // MARK: - Preview
 #Preview {
-    SettingsView()
+    SettingsView(mostrarVista: .constant(false))
 }

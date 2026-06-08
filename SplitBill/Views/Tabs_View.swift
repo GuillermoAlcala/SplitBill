@@ -8,6 +8,7 @@
 import SwiftUI
 @available(iOS 18.0, *)
 struct Tabs_View: View {
+    @State private var showTab : Bool = true
     var body: some View {
         TabView{
             Tab("Home",systemImage: components.iconHome, content: {
@@ -19,15 +20,37 @@ struct Tabs_View: View {
             })
             
             Tab("Settings", systemImage: components.iconSettings){
-                SettingsView()
+                SettingsView(mostrarVista: $showTab)
             }
-            Tab("Developer",systemImage: components.iconDeveloper,content: {
-                DeveloperView()
+            if showTab{
+                Tab("Developer",systemImage: components.iconDeveloper,content: {
+                    DeveloperView()
                 })
-    
-        }
+            }
+            
+        
+        }//TabView
         .tint(components.ButtonColorGray)
         .tabViewStyle(.automatic)
-    }
+    }//View
+    
 }
 
+struct HiddenFeatures: View {
+    //DarkMode
+    //hiddden TabView Developer
+    //Delete all your information - Button - sheet
+    @Binding  var isDeveloperTabVisible : Bool
+    
+    var body: some View {
+        VStack{
+                Toggle(isDeveloperTabVisible ? "Ocultar Vista" : "Mostrar Vista",
+                       systemImage: isDeveloperTabVisible ? "eye" : "eye.slash",
+                       isOn: $isDeveloperTabVisible)
+                .toggleStyle(.switch)
+                .tint(.green)
+               // .contentTransition(.symbolEffect)
+                .contentTransition(.symbolEffect(.replace)) // Animate symbol smoothly
+        }
+    }
+}

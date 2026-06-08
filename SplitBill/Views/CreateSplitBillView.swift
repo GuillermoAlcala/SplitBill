@@ -72,7 +72,6 @@ struct CreateSplitBillView: View {
                 }
                 ScrollView(.horizontal, showsIndicators: false,content: {
                     HStack(content: {
-                        
                         ForEach(Split_Model.Tip.allCases){ tip in
                             CardTaxes(tip: tip, isSelected: tipSelection == tip)
                                 .onTapGesture {

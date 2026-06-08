@@ -11,47 +11,44 @@ import SwiftUI
 struct DeveloperView: View {
     var body: some View {
         NavigationStack{
-            
-                VStack{
-                    Text("Dale un vistazo a mi portafolio en la App Store, para que explores un poco mis desarrollos más recientes.")
-                        .multilineTextAlignment(.leading)
-                        .padding()
-                        Link(destination: URL(string: "https://apps.apple.com/mx/iphone/search?term=guillermo%20chacon")!, label: {
-                            Text("Mis Apps")
-                                .font(.title)
-                                .underline()
-                                .foregroundStyle(.indigo)
-                                .bold()
-                            
-                        })
-                    
+                ZStack{
+                    gradientBackground
+                    VStack(spacing:10){
+                    customText
                 }
-            
+                }.ignoresSafeArea(.all)
                 .navigationTitle("Developer")
+              
         }
     }
-    struct CustomAppBackground: View {
-        var body: some View {
-            ZStack {
-                LinearGradient(
-                    colors: [
-                        Color("0a1628"),
-                        Color("0d1d36"),
-                        Color("142847")
-                    ],
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
+    
+    @ViewBuilder
+    private var gradientBackground: some View{
+        RoundedRectangle(cornerRadius: 40,style: .continuous)
+        (LinearGradient(colors: [.gray,.gray.opacity(0.7)], startPoint: .top, endPoint: .bottom))
+    }
+    @ViewBuilder
+    private var customText: some View{
+        Text("Dale un vistazo a mi portafolio en la App Store, para que explores mis desarrollos más recientes.")
+            .multilineTextAlignment(.leading)
+            .frame(maxWidth: .infinity)
+            .fontDesign(.monospaced)
+            .shadow(radius: 1.0)
+            .padding()
+        Link(destination: URL(string: "https://apps.apple.com/mx/iphone/search?term=guillermo%20chacon")!, label: {
+            Text("Mis Apps")
+                .font(.largeTitle)
+                .underline()
+                .foregroundStyle(.white)
+                .bold()
+                .shadow(radius: 5.0)
+            Image(systemName: "apple.terminal")
+                .font(.system(.title))
+                .foregroundStyle(.white.secondary)
+                .bold()
                 
-                RadialGradient(
-                    colors: [Color("f4a261").opacity(0.08), .clear],
-                    center: UnitPoint(x: 0.2, y: 0.15),
-                    startRadius: 0,
-                    endRadius: 400
-                )
-            }
-            .ignoresSafeArea()
-        }
+                
+        })
     }
 }
 
