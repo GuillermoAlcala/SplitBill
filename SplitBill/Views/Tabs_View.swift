@@ -28,6 +28,14 @@ struct Tabs_View: View {
                 })
             }
             
+            Tab("Stats",systemImage: components.iconStats){
+                if #available(iOS 26.0, *) {
+                    StatsV2()
+                } else {
+                    // Fallback on earlier versions
+                }
+                
+            }
         
         }//TabView
         .tint(components.ButtonColorGray)

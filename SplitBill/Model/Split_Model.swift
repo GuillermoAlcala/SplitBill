@@ -35,6 +35,7 @@ class Split_Model: Identifiable{
         return totalAmount / Double(numberOfPeople)
     }
     
+    
     init(id : UUID, amount: Double, numberOfPeople: Int, tip: Tip,
          //total: Double,
          currentDate: Date = .now){
@@ -46,16 +47,37 @@ class Split_Model: Identifiable{
         self.currentDate = currentDate
     }
     
-    
-    enum Tip: String, Codable, CaseIterable, Identifiable{
+    enum Tip: String, Codable, CaseIterable, Identifiable {
+
         case ZeroPercent    = "0%"
         case FivePercent    = "5%"
         case TenPercent     = "10%"
         case FifteenPercent = "15%"
-        
-        var id: String{self.rawValue}
-        
-    }
-}
 
+        var id: String { self.rawValue }
+
+        var percentage: Int {
+            switch self {
+            case .ZeroPercent:
+                return 0
+            case .FivePercent:
+                return 5
+            case .TenPercent:
+                return 10
+            case .FifteenPercent:
+                return 15
+            }
+        }
+    }
+    
+
+    enum FilterType: String, Codable, CaseIterable, Identifiable{
+        case week  = "Week"
+        case month = "Month"
+        case all   = "All"
+        case year  = "Year"
+        var id: String {self.rawValue}
+        }
+
+}
 

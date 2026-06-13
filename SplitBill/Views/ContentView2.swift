@@ -95,7 +95,7 @@ struct ContentView2: View {
     
     private var monthYearLabel: String {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "es_MX")
+      //  formatter.locale = Locale(identifier: "es_MX")
         formatter.dateFormat = "MMMM · yyyy"
         return formatter.string(from: .now).uppercased()
     }

@@ -8,11 +8,31 @@
 import SwiftUI
 
 struct StatCards: View {
+    let title : String
+    let value: String
+    let systemName: String?
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack{
+            HStack{
+                Image(systemName: systemName ?? "")
+                
+                Text(LocalizedStringKey(value))
+                    //.font()
+                    .multilineTextAlignment(.center)
+                
+                Text(LocalizedStringKey(title))
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .multilineTextAlignment(.center)
+            }
+        }.frame(maxWidth: .infinity)
+         .padding()
+         .background(.thinMaterial)
+         .clipShape(RoundedRectangle(cornerRadius: 10))
+        
     }
 }
 
-#Preview {
-    StatCards()
-}
+
