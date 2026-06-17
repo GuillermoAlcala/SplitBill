@@ -52,7 +52,7 @@ struct CreateSplitView2: View {
                     .padding(.bottom,24)
                     .onAppear{
                         AmountFocus = true
-                    }
+                    } // probando RowSplitView2
                     CardPerson(CounterPerson: $NumberOfPeople)
                     
                     Spacer()
@@ -71,20 +71,6 @@ struct CreateSplitView2: View {
                         .frame(maxWidth:220)
                     
                     Spacer()
-                    
-                    //                ScrollView(.horizontal, showsIndicators: false,content: {
-                    //                    HStack(content: {
-                    //                
-                    //                        ForEach(Split_Model.Tip.allCases){ tip in
-                    //                            CardTaxes(tip: tip, isSelected: tipSelection == tip)
-                    //                                .onTapGesture {
-                    //                                    tipSelection = tip
-                    //                                }
-                    //                            
-                    //                        }
-                    //                    })
-                    //                })
-                    
                     Spacer()
                     Divider()
                     VStack(spacing:12){
@@ -102,7 +88,8 @@ struct CreateSplitView2: View {
                             .bold()
                     }.padding(60)
                        
-                }//.frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top)
+                } //VStack
+                //.frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top)
                 
                 //   .navigationSubtitle("New Split")
                     .toolbar(content: {
@@ -202,6 +189,8 @@ struct CreateSplitView2: View {
         }
         
     }
+    
+    
 }
 
 #Preview {

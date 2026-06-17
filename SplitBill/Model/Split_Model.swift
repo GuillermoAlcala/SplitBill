@@ -28,6 +28,12 @@ class Split_Model: Identifiable{
         return finaltotal
     }
     
+    var isValidAmount: Bool{
+        amount > 0        
+        }
+        
+    
+    
     var totalPerson: Double{
         guard numberOfPeople > 0 else{
             return 0

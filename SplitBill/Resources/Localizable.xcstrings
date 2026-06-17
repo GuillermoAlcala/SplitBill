@@ -12,7 +12,14 @@
       }
     },
     "· máx %lld" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "· máx%lld"
+          }
+        }
+      }
     },
     "%@" : {
       "localizations" : {
@@ -38,8 +45,14 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$lld (%2$lld%%)"
+            "state" : "translated",
+            "value" : "%1$lld(%2$lld%%)"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld(%lld%%)"
           }
         }
       }
@@ -87,7 +100,14 @@
       }
     },
     "%lld%%" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%%"
+          }
+        }
+      }
     },
     "0.00" : {
       "localizations" : {
@@ -132,7 +152,20 @@
       }
     },
     "Agrégalos desde Home" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add them from Home"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agrégalos desde Home"
+          }
+        }
+      }
     },
     "Ajustes" : {
       "localizations" : {
@@ -312,13 +345,46 @@
       }
     },
     "cuentas" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "bills"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "cuentas"
+          }
+        }
+      }
     },
     "Cuentas" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bills"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuentas"
+          }
+        }
+      }
     },
     "D%lld" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "D%lld"
+          }
+        }
+      }
     },
     "Dale un vistazo a mi portafolio en la App Store, para que explores mis desarrollos más recientes." : {
       "localizations" : {
@@ -417,10 +483,36 @@
       }
     },
     "Día" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Day"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Día"
+          }
+        }
+      }
     },
     "Día fin" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "End Day"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Día fin"
+          }
+        }
+      }
     },
     "Done" : {
       "localizations" : {
@@ -471,7 +563,14 @@
       }
     },
     "Fecha" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fecha"
+          }
+        }
+      }
     },
     "Filter" : {
       "localizations" : {
@@ -522,7 +621,14 @@
       }
     },
     "i" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "i"
+          }
+        }
+      }
     },
     "Idioma" : {
       "localizations" : {
@@ -557,10 +663,24 @@
       }
     },
     "Más" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Más"
+          }
+        }
+      }
     },
     "Menos" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menos"
+          }
+        }
+      }
     },
     "Mis Apps" : {
       "localizations" : {
@@ -612,10 +732,24 @@
       }
     },
     "Monto" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monto"
+          }
+        }
+      }
     },
     "Monto acum." : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monto acum."
+          }
+        }
+      }
     },
     "Mostrar Vista" : {
       "localizations" : {
@@ -666,14 +800,27 @@
       }
     },
     "No hay datos para graficar" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There are no data to graph"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay datos para graficar"
+          }
+        }
+      }
     },
     "No hay Datos para graficar" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "No data to show"
+            "value" : "There are no data to graph"
           }
         },
         "es-419" : {
@@ -864,7 +1011,14 @@
       }
     },
     "Prom %@" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prom%@"
+          }
+        }
+      }
     },
     "Prom %@★" : {
       "localizations" : {
@@ -883,7 +1037,14 @@
       }
     },
     "Promedio" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Promedio"
+          }
+        }
+      }
     },
     "Promedio %@" : {
       "localizations" : {
@@ -902,7 +1063,20 @@
       }
     },
     "Rango" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Range"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rango"
+          }
+        }
+      }
     },
     "Recientes" : {
       "localizations" : {
@@ -938,7 +1112,14 @@
       }
     },
     "Sel" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sel"
+          }
+        }
+      }
     },
     "Selecciona la propina" : {
       "localizations" : {
@@ -957,13 +1138,40 @@
       }
     },
     "Semana" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Week"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Semana"
+          }
+        }
+      }
     },
     "Semana fin" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Semana fin"
+          }
+        }
+      }
     },
     "Serie" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Serie"
+          }
+        }
+      }
     },
     "Settings" : {
       "localizations" : {
@@ -1080,7 +1288,14 @@
       }
     },
     "Tipo" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tipo"
+          }
+        }
+      }
     },
     "Toca el botón + para crear tu primer split" : {
       "localizations" : {
@@ -1181,7 +1396,20 @@
       }
     },
     "v" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "v"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "v"
+          }
+        }
+      }
     },
     "Vincular cuenta bancaria" : {
       "localizations" : {

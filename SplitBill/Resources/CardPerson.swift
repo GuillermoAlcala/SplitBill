@@ -22,7 +22,7 @@ struct CardPerson: View {
                 .shadow(radius: 1)
             VStack(alignment: .leading){
                 HStack{
-                    Image(systemName: "person.2")
+                    Image(systemName: components.iconPerson2)
                     Text("Personas")
                     Spacer()
                     HStack() {
@@ -47,7 +47,7 @@ struct CardPerson: View {
                 CounterPerson -= 1
             }
         }label: {
-            Image(systemName: "minus")
+            Image(systemName: components.iconMinus)
                 .frame(width: 15, height: 15)
             //  .clipShape(RoundedRectangle(cornerRadius: 12))
         }
@@ -61,7 +61,7 @@ struct CardPerson: View {
            // }
             
         }label: {
-            Image(systemName: "plus")
+            Image(systemName: components.iconPlus)
                 .frame(width: 15, height: 15)
          //     .clipShape(RoundedRectangle(cornerRadius: 12))
         }

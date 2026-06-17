@@ -109,11 +109,13 @@ struct CreateSplitBillView: View {
     @ViewBuilder
     private var customSaveButton: some View{
         Button("Save"){
-            
-            //implementar func
-            save()
-            dismiss()
-        }.disabled(amount == nil || amount == 0)
+            if previewSplit.isValidAmount{ // propiedad computada que valida que el amount sea > 0 
+                //implementar func
+                save()
+                print(previewSplit.amount)
+                dismiss()
+            }
+        }.disabled(!previewSplit.isValidAmount)
             .fontDesign(.monospaced)
             .tint(components.ButtonColorGray)
     }
@@ -135,6 +137,8 @@ struct CreateSplitBillView: View {
             }
         }
     }
+    
+    
     
     
   private func save(){
